@@ -5,14 +5,25 @@
 			<version>0.1.0</version>
 		</Mdg_Giftregistry>
 	</modules>
+	<frontend>
+		<routers>
+			<giftregistry>
+				<use>standard</use>
+				<args>
+					<module>Mdg_Giftregistry</module>
+					<frontname>registry</frontname>
+				</args>
+			</giftregistry>
+		</routers>
+	</frontend>
 	<global>
 		<models>
 			<mdg_giftregistry>
-				<class>Mdg_Giftregisry_Model</class>
-				<resourceModel>mdg_giftregistry_mysql14</resourceModel>
+				<class>Mdg_Giftregistry_Model</class>
+				<resourceModel>mdg_giftregistry_mysql4</resourceModel>
 			</mdg_giftregistry>
-			<mdg_giftregistry_mysql14>
-				<class>Mdg_Giftregistry_Model_Mysql14</class>
+			<mdg_giftregistry_mysql4>
+				<class>Mdg_Giftregistry_Model_Mysql4</class>
 				<entities>
 					<entity>
 						<table>mdg_giftregisry_entity</table>
@@ -24,7 +35,7 @@
 						<table>mdg_giftregistry_type</table>
 					</entity>
 				</entities>
-			</mdg_giftregistry_mysql14>
+			</mdg_giftregistry_mysql4>
 		</models>
 		<blocks>
 			<mdg_giftregistry>
