@@ -1,0 +1,42 @@
+<?php $helper = Mage::helper('mdg_giftregistry'); ?>
+<form action="<?php echo $this->getUrl('giftregistry/index/newPost/') ?>" method="POST" id="form-validate">
+	<fieldset>
+		<?php echo $this->getBlockHtml('formkey')?>
+		<ul class="form-list">
+			<li>
+				<label for="type_id">Event Type</label>
+				<select name="type_id" id="type_id">
+					<?php foreach($helper->getEventTypes() as $type): ?>
+						<option id="<?php echo $type->getTypeId(); ?>" value="<?php echo $type->getCode(); ?>">
+							<?php echo $type->getName(); ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+			</li>
+			<li class="field">
+				<input type="text" name="event_name" id="event_name" title="Event Name" />
+				<label class="giftreg" for="event_name">Event Name</label>
+			</li>
+			<li class="field">
+				<input type="text" name="event_location" id="event_location" title="Event Location" />
+				<label class="giftreg" for="event_location">Event Location</label>
+			</li>
+			<li class="field">
+				<input type="text" name="event_country" id="event_country" title="Event Country" />
+				<label class="giftreg" for="event_country">Event Country</label>
+			</li>
+		</ul>
+		<div class="buttons-set">
+			<button type="submit" title="Save" class="button">
+				<span>
+					<span>Save</span>
+				</span>
+			</button>
+		</div>
+	</fieldset>	
+</form>
+<script type="text/javascript">
+	//<![CDATA[
+	var dataForm = new VarienForm('form-validate', true);
+	//]]>
+</script>

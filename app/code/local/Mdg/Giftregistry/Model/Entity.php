@@ -7,7 +7,7 @@
 		
 		public function updateRegistryData(Mage_Customer_Model_Customer $customer, $data){
 			try{
-				if(!empty($data){
+				if(!empty($data)){
 					$this->setCustomerId($customer->getId());
 					$this->setWebsiteId($customer->getWebsiteId());
 					$this->setTypeId($data['type_id']);
