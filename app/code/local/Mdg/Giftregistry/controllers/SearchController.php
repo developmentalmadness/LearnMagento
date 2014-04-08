@@ -7,10 +7,10 @@ class Mdg_Giftregistry_SearchController extends Mage_Core_Controller_Front_Actio
 		return $this;
 	}
 	
-	public fucntion resultsAction(){
+	public function resultsAction(){
 		$this->loadLayout();
 		if($searchParams = $this->getRequest()->getParam('search_params')) {
-			$results -> Mage::getModel('mdg_giftregistry/entity')->getCollection();
+			$results = Mage::getModel('mdg_giftregistry/entity')->getCollection();
 			if($searchParams['type']){
 				$results->addFieldToFilter('type_id', $searchParams['type']);
 			}
