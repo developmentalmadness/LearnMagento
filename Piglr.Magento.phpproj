@@ -9,6 +9,7 @@
     <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
     <AssemblyName>Piglr.Magento</AssemblyName>
+    <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -13917,6 +13918,7 @@
     <Compile Include="get.php" />
     <Compile Include="includes\config.php" />
     <Compile Include="index.php" />
+    <Compile Include="Info.php" />
     <Compile Include="install.php" />
     <Compile Include="js\index.php" />
     <Compile Include="lib\3Dsecure\CentinelClient.php" />

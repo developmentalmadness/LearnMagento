@@ -35,3 +35,4 @@ atlassian*
 /var/*
 /app/code/Magento/TestModule*
 *.phpproj.user
+*.suo
